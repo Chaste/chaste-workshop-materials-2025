@@ -1,6 +1,12 @@
-# [Setup](https://github.com/Chaste/chaste-workshop-materials-2025/tree/main/day-03)
+# Setup
 
-## Minimum System Requirements
+## System Requirements
+
+|                 | Minimum           | Recommended       |
+| --------------- | ----------------- | ----------------- |
+| Memory          | 8 GB              | 16 GB             |
+| Free Disk Space | 10 GB             | 20 GB             |
+| CPU             | 2 cores @ 1.5 GHz | 4 cores @ 2.0 GHz |
 
 ## Linux Setup
 
