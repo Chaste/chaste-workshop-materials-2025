@@ -5,12 +5,12 @@
 ## Introductions (11:15)
 
 ## Overview of cell-based modelling (11:30)
-[[Slides]](https://docs.google.com/presentation/d/1U4rSGuInuEOrriWYq2TKAFnIlvl-I2n_qPb6P6PR2-M/edit#slide=id.g24f6aa42514_0_76)
+[[Slides]](https://docs.google.com/presentation/d/1avRdivy53g6TQEPBjYLvx7UanoQGE_1YmrbV8_h0CRQ)
 
 ## PyChaste for cell-based modelling (13:30)
 
 ## Hands-on session [ PyChaste for cell-based modelling ] (14:00)
-[[Code]](https://colab.research.google.com/drive/17idVQ1dwjF2pDVdwKCRKT15dfn3qXN0J?usp=sharing)
+[[Code]](https://colab.research.google.com/drive/1zgoqilNJAMf0frdSzJ71yERnDPyaNnWY)
 
 ## Chaste on GPUs (15:00)
 
