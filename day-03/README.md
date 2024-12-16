@@ -7,6 +7,7 @@
 ## Hands-on session [ Modelling cell-environment feedback ] (10:30)
 
 ## How to get further support / how to contribute to Chaste (11:40)
+[[Slides]](https://drive.google.com/file/d/18A7gf0aq_celxgFDenWGVbdXlNDyfehr/view?usp=share_link)
 
 ## Scientific case study #4 (12:00 )
 
