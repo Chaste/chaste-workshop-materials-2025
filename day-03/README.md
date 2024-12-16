@@ -3,7 +3,7 @@
 ## Scientific case study #3 (9:30)
 
 ## Modelling cell-environment feedback (10:00)
-[[Slides]](https://docs.google.com/presentation/d/1hRv7erEF7neLLpskijKcErcCNDyj_gcNhWj_IgaZcpM/edit#slide=id.g24f6aa42514_0_76)
+[[Slides]](https://docs.google.com/presentation/d/1sVW8XUgLjyQP4N3sjwfFqTfZgeSghLr8iojVSO76lQs)
 
 ## Hands-on session [ Modelling cell-environment feedback ] (10:30)
 [[Code]](https://github.com/BJackal/ChasteWorkshopSRN/tree/master)
