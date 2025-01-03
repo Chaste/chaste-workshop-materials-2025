@@ -1,6 +1,7 @@
 # Day 01 - Wed 8 Jan
 
 ## Welcome address (11:00)
+[[Slides]](https://docs.google.com/presentation/d/1vAoc4LWgDXqzSQyeHBae1yJsSXZa1ULkHMbhgP0Xvdk/)
 
 ## Introductions (11:15)
 
