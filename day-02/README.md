@@ -12,6 +12,7 @@
 [[Slides]](https://drive.google.com/file/d/1p7dI94zlZCxRrW8Jqgce0gyWV8vKfAfF)
 
 ## Stream B: Cardiac Modelling (14:30)
+[[Slides]](https://uniofnottm-my.sharepoint.com/:p:/g/personal/gary_mirams_nottingham_ac_uk/ETq_Ss5wrAFGkDavE38VvT8BG503W4qNAiIvPRzrPDS6qg?e=S7Ufip)
 
 ## Stream A: Hands-on session [ Immersed Boundary Method in C++ and Python ] (15:00)
 [[C++ Code]](https://github.com/Chaste/ImmersedBoundaryWorkshop) [[Python Code]](https://colab.research.google.com/drive/19ePzlqGsh-6tVEUgnpvrm4fvjbhS1PYQ)
