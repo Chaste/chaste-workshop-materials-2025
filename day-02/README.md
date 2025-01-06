@@ -9,10 +9,12 @@
 ## Hands-on session [ C++ Chaste for cell-based modelling (with user projects) ] (13:30)
 
 ## Stream A: Immersed Boundary Method in C++ and Python (14:30)
+[[Slides]](https://drive.google.com/file/d/1p7dI94zlZCxRrW8Jqgce0gyWV8vKfAfF)
 
 ## Stream B: Cardiac Modelling (14:30)
 
 ## Stream A: Hands-on session [ Immersed Boundary Method in C++ and Python ] (15:00)
+[[C++ Code]](https://github.com/Chaste/ImmersedBoundaryWorkshop) [[Python Code]](https://colab.research.google.com/drive/19ePzlqGsh-6tVEUgnpvrm4fvjbhS1PYQ)
 
 ## Stream B: Hands-on session [ Cardiac Modelling ] (15:00)
 
