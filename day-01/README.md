@@ -16,5 +16,6 @@
 ## Chaste on GPUs (15:00)
 
 ## Installing Chaste and running tests (15:30)
+[[Slides]](https://docs.google.com/presentation/d/1SLtv8ugYJB-8hDmtTAMuxya1YDrkJPSIT-VOrqybKBc)
 
 ## Early feedback session (16:45)
