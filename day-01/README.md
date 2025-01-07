@@ -9,6 +9,7 @@
 [[Slides]](https://docs.google.com/presentation/d/1avRdivy53g6TQEPBjYLvx7UanoQGE_1YmrbV8_h0CRQ)
 
 ## PyChaste for cell-based modelling (13:30)
+[[Slides]](https://docs.google.com/presentation/d/1cka1iJ9jJFqy7mcWOl1Bg9BwDtNG41aB61ufJSr4Uew)
 
 ## Hands-on session [ PyChaste for cell-based modelling ] (14:00)
 [[Code]](https://colab.research.google.com/drive/1zgoqilNJAMf0frdSzJ71yERnDPyaNnWY)
