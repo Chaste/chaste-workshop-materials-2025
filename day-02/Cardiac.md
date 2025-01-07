@@ -35,7 +35,7 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
 ## Suggested exercises
 
 * Run the tutorials and visualise the results [using Paraview](https://chaste.github.io/docs/user-guides/visualisation-guides/paraview-for-cardiac/).
-  * This command should work if you are using the codespace setup: `cd ~/src && python python/utils/AddVtuTimeAnnotations.py ~/src/output/BidomainTutorial/vtk_output/results.vtu ~/src/output/BidomainTutorial/vtk_output/annotated.vtu`
+  * This command should work if you are using the codespace setup: `cd ~/src && python python/utils/AddVtuTimeAnnotations.py ~/output/BidomainTutorial/vtk_output/results.vtu ~/output/BidomainTutorial/vtk_output/annotated.vtu`
   * Then download to your machine and open `annotated.vtu` with Paraview.
 * Copy the test in the tutorial and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono' and how you deal with the results Vec
   (which now has the form `V_0 ... V_n`, not `V_0 phi_0_ ... V_n phi_n`). 
