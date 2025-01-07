@@ -14,6 +14,7 @@
 ## Scientific case study #4 (12:00 )
 
 ## Retrospective: lessons learned, future plans with Chaste (12:30)
+[[Slides]](https://docs.google.com/presentation/d/1eDvY-2RfjN2u3v3aMMq1O-ZcIOqI1Jb5JJ74Hy3fpQI)
 
 ## Feedback Survey (12:45)
 [[Form]](https://docs.google.com/forms/d/11Jg_f4Y6s-3j3pEUjr0G_XxeLkBHzqk3RHGtJ343UtE)
