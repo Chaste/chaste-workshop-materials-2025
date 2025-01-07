@@ -9,7 +9,7 @@
 ## Hands-on session [ C++ Chaste for cell-based modelling (with user projects) ] (13:30)
 
 ## Stream A: Immersed Boundary Method in C++ and Python (14:30)
-[[Slides]](https://drive.google.com/file/d/1p7dI94zlZCxRrW8Jqgce0gyWV8vKfAfF)
+[[Slides]](https://docs.google.com/presentation/d/1g_QMuVStsYgmOqZeAWJlA-nkibBAQP55g15_TzgAJ2g)
 
 ## Stream B: Cardiac Modelling (14:30)
 [[Slides]](https://uniofnottm-my.sharepoint.com/:p:/g/personal/gary_mirams_nottingham_ac_uk/ETq_Ss5wrAFGkDavE38VvT8BG503W4qNAiIvPRzrPDS6qg?e=S7Ufip)
