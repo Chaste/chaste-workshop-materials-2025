@@ -17,7 +17,7 @@
 ## Stream A: Hands-on session [ Immersed Boundary Method in C++ and Python ] (15:00)
 [[C++ Code]](https://github.com/Chaste/ImmersedBoundaryWorkshop) [[Python Code]](https://colab.research.google.com/drive/19ePzlqGsh-6tVEUgnpvrm4fvjbhS1PYQ)
 
-## Stream B: Hands-on session [ Cardiac Modelling ] (15:00)
+## Stream B: [Hands-on session on Cardiac Modelling](Cardiac.md) (15:00)
 
 ## Scientific case study #2 (16:30)
 
