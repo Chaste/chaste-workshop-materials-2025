@@ -1,3 +1,4 @@
+<!--
 # Writing a simple test
 
 Create a new test file in `heart/test`. Name your new file `Test[Something].hpp`.
@@ -13,16 +14,23 @@ to verify that the answer is $\frac{\pi^2}{6}$, to within some tolerance.
 **Note 1:** Recall that in C or C++, if `n>1` is an `int`/`unsigned` `1/(n*n)` will be zero - to get the expected answer, you must write `1.0/(n*n)`
 
 **Note 2:** pi is `M_PI`
+-->
 
 # Solving ODEs and PDEs (optional)
 
-Read the tutorials on solving ODEs and *linear* PDEs. How much time you spend in these will depend on whether you have already spent time installing Chaste, your familiarity with C++ and in particular abstract classes and inheritence, and what you aim to use Chaste for - it may be sensible to skip these tutorials or only look at them briefly. However, they will give an understanding of the 'core' functionality in Chaste and also introduce the components used in cardiac problems - monodomain and bidomains problems are composed of linear PDEs (with a nonlinear source term) coupled to a set of ODEs.
+Read the [tutorials on solving ODEs and *linear* PDEs](https://chaste.github.io/docs/user-tutorials/). How much time you spend in these will depend on whether you have already spent time installing Chaste, your familiarity with C++ and in particular abstract classes and inheritence, and what you aim to use Chaste for - it may be sensible to skip these tutorials or only look at them briefly. However, they will give an understanding of the 'core' functionality in Chaste and also introduce the components used in cardiac problems - monodomain and bidomains problems are composed of linear PDEs (with a nonlinear source term) coupled to a set of ODEs.
 
-Run the tutorials, then use them as a basis for the following exercises (either use the test file you already created above, or create another test file)
+Run the tutorials, then use them as a basis for the following exercises.
 
 # Solving Cardiac Problems
 
-First, read the [tutorial on solving bidomain problems](https://chaste.github.io/docs/user-tutorials/runningbidomainsimulations/), and run this tutorial.
+First, have a look at the [Single Cell Cardiac Tutorial](https://chaste.github.io/docs/user-tutorials/singlecellsimulation/), and check that all runs OK on your own install of Chaste (in the build folder, run `ctest -R TestSingleCellSimulationTutorial`).
+
+Second, read the [tutorial on solving bidomain problems](https://chaste.github.io/docs/user-tutorials/runningbidomainsimulations/), **copy this code to a new C++ .hpp test file in your own user project (N.B. your user project will need to be [set up to use the 'heart' component](https://chaste.github.io/docs/user-guides/user-projects/#user-project-guide))**, as we'll use it as a basis for the exercises below, and run this tutorial.
+
+We'll use Paraview for visualization (there is also the option to output to the Meshalyzer/CARP or Cmgui/Auckland CMISS formats), but since the cell-based workshop has been using Paraview we'll focus on that, it's probably the most powerful and fully-featured anyway.
+
+**Note** you need to run a little script on the Chaste VTK output to add time annotations to avoid the need to duplicate/alter the mesh at each time point. See [Using Paraview for Visualizing Cardiac Simulation Ouptut](https://chaste.github.io/docs/user-guides/visualisation-guides/paraview-for-cardiac/).
 
 ## Suggested exercises
 
