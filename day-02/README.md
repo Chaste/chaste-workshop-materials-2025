@@ -18,5 +18,6 @@
 [[C++ Code]](https://github.com/Chaste/ImmersedBoundaryWorkshop) [[Python Code]](https://colab.research.google.com/drive/19ePzlqGsh-6tVEUgnpvrm4fvjbhS1PYQ)
 
 ## Stream B: [Hands-on session on Cardiac Modelling](Cardiac.md) (15:00)
+[[Instructions]](Cardiac.md)
 
 ## Scientific case study #2 (16:30)
