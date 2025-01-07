@@ -28,7 +28,7 @@ First, have a look at the [Single Cell Cardiac Tutorial](https://chaste.github.i
 
 Second, read the [tutorial on solving bidomain problems](https://chaste.github.io/docs/user-tutorials/runningbidomainsimulations/), **copy this code to a new C++ .hpp test file in your own user project (N.B. your user project will need to be [set up to use the 'heart' component](https://chaste.github.io/docs/user-guides/user-projects/#user-project-guide))**, as we'll use it as a basis for the exercises below, and run this tutorial.
 
-We'll use Paraview for visualization (there is also the option to output to the Meshalyzer/CARP or Cmgui/Auckland CMISS formats), but since the cell-based workshop has been using Paraview we'll focus on that, it's probably the most powerful and fully-featured anyway.
+We'll use [Paraview](https://www.paraview.org/) for visualization (there is also the option to output to the [Meshalyzer](https://git.opencarp.org/openCARP/meshalyzer) or [Cmgui](https://github.com/cmiss/cmgui) formats), but since the cell-based workshop has been using Paraview we'll focus on that.
 
 **Note** you need to run a little script on the Chaste VTK output to add time annotations to avoid the need to duplicate/alter the mesh at each time point. See [Using Paraview for Visualizing Cardiac Simulation Ouptut](https://chaste.github.io/docs/user-guides/visualisation-guides/paraview-for-cardiac/).
 
