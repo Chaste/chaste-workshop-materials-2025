@@ -15,6 +15,7 @@
 [[Code]](https://colab.research.google.com/drive/1zgoqilNJAMf0frdSzJ71yERnDPyaNnWY)
 
 ## Chaste on GPUs (15:00)
+[[Slides]](https://docs.google.com/presentation/d/1DigpTihAQcul1HePEZnzJHHK1ohRES4oe9YzmaR-MSk)
 
 ## Installing Chaste and running tests (15:30)
 [[Slides]](https://docs.google.com/presentation/d/1SLtv8ugYJB-8hDmtTAMuxya1YDrkJPSIT-VOrqybKBc)
