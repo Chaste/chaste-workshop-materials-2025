@@ -20,5 +20,3 @@
 ## Stream B: [Hands-on session on Cardiac Modelling](Cardiac.md) (15:00)
 
 ## Scientific case study #2 (16:30)
-
-## Dinner (19:00)
