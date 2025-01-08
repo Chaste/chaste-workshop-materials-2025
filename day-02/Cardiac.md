@@ -48,7 +48,7 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
   
 ```p_cell->SetParameter("membrane_fast_sodium_current_conductance", 0.0);```
 
-* Try altering the 'Cell Factory' at the top of ``` TestRunningBidomainSimulationsTutorial.hpp``` to use this method to set the sodium channel conductance to zero in one corner of the mesh (x >= 0.05 and y <= 0.02). Visualize the new spead of the activation wave (because a lot of the charge here moves by diffusion, this region still depolarises, but more slowly!). For more flexibility in tagging new parameters and adjusting what gets generated, see the 
+* Try altering the 'Cell Factory' at the top of ```TestRunningBidomainSimulationsTutorial.hpp``` to use this method to set the sodium channel conductance to zero in one corner of the mesh (x >= 0.05 and y <= 0.02). Visualize the new spead of the activation wave (because a lot of the charge here moves by diffusion, this region still depolarises, but more slowly!). For more flexibility in tagging new parameters and adjusting what gets generated, see the 
 [Code Generation From CellML Guide](https://chaste.github.io/docs/user-guides/code-generation-from-cellml/).
 
 > [!TIP]
@@ -62,7 +62,7 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
 >}
 >```
 
-* Make a second test method within the tutorial .hpp file and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono'. Note, you'll need to `#include MonodomainProblem.hpp` at the top of the file.
+* Make a second test method within the tutorial ```TestRunningBidomainSimulationsTutorial.hpp``` file and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono'. Note, you'll need to `#include MonodomainProblem.hpp` at the top of the file.
 
 (If you were using the results vector within C++, be aware that indexing will be different for voltage as it now has the form `V_0 ... V_n`, not `V_0 phi_0_ ... V_n phi_n`).
 
@@ -79,7 +79,7 @@ monodomain_problem.SetWriteInfo();
 monodomain_problem.Solve();
 ```
 makes the program print out `[min(V), max(V)]` at each output time. It can be a simple way to see whether waves are propagating without even having to visualise the output. 
-* Using `SetWriteInfo()` Determine, approximately, by trial and error, the threshold below which the stimulus magnitude is too small to create a propagating action potential. 
+Using this `SetWriteInfo()` call determine, approximately, by trial and error, the threshold below which the stimulus magnitude is too small to create a propagating action potential. 
 
 The default end time is only 5ms here, so we just see the activation wave. If you want to see the repolarisation wave you need to run until time 350ms.
 
