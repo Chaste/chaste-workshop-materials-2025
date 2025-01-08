@@ -40,6 +40,21 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
 
 * Have a look at the auto-converted-at-compile-time CellML file which is in `build/heart/src/odes/cellml/LuoRudy1991.cpp`. Scroll down to the bottom method which sets the 'tagged' parameter names and values. These parameters can be altered in the C++ by calling (e.g.) `p_cell->SetParameter("membrane_fast_sodium_current_conductance", 0.0)`. Try altering the 'Cell Factory' at the top to use this method to set the sodium channel conductance to zero in one corner of the mesh (x >= 0.05 and y <= 0.02). Visualize the new spead of the activation wave (because a lot of the charge here moves by diffusion, this region still depolarises, but more slowly!).
 
+  * **Note:** in the cell factory, you can do something like
+
+```cpp
+if ( (x>0.4) && (x<0.6) )
+{
+    LuoRudyIModel1991OdeSystem* p_luo_rudy_system = new LuoRudyIModel1991OdeSystem(mpSolver, mpZeroStimulus);
+    p_luo_rudy_system->SetParameter("membrane_fast_sodium_current_conductance",0.0);
+    return p_luo_rudy_system;
+}
+```
+where the parameter names can be seen by looking in the auto-generated model .cpp files.
+
+For more flexibility in tagging new parameters and adjusting what gets generated, see the 
+[Code Generation From CellML Guide](https://chaste.github.io/docs/user-guides/code-generation-from-cellml/).
+
 * Make a second test method within the tutorial .hpp file and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono' and how you deal with the results Vec
   (which now has the form `V_0 ... V_n`, not `V_0 phi_0_ ... V_n phi_n`). 
 **Note** if you need to do anything to examine/print the solution in the C++ file, we suggest you just use the `ReplicatableVector` to deal with the solution (replicated across all processes, fine for these small problems), not `DistributedVector` just because the output from the latter can be confusing if you aren't used to dealing with parallel computing). 
@@ -55,16 +70,4 @@ monodomain_problem.Solve();
 ```
 this method makes the program print out `[min(V), max(V)], [min(phi_e), max(phi_e)]` at each output time. It can be a simple way to see whether waves are propagating without even having to visualise the output. Determine, approximately, by trial and error/interval bisection, for this test, the threshold below which the stimulus magnitude is too small to create a propagating action potential. 
 
-**Note:** in the cell factory, you can do something like
 
-```cpp
-if ( (x>0.4) && (x<0.6) )
-{
-    LuoRudyIModel1991OdeSystem* p_luo_rudy_system = new LuoRudyIModel1991OdeSystem(mpSolver, mpZeroStimulus);
-    p_luo_rudy_system->SetParameter("some_parameter_name",0.1); // where the parameter names can be seen by looking in the auto-generated model .hpp files.
-    return new p_luo_system;
-}
-```
-
-For more flexibility in tagging new parameters and adjusting what gets generated see the 
-[Code Generation From CellML Guide](https://chaste.github.io/docs/user-guides/code-generation-from-cellml/).
