@@ -37,11 +37,14 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
 * Run the tutorials and visualise the results [using Paraview](https://chaste.github.io/docs/user-guides/visualisation-guides/paraview-for-cardiac/).
   * This command should work if you are using the codespace setup: `cd ~/src && python python/utils/AddVtuTimeAnnotations.py ~/output/BidomainTutorial/vtk_output/results.vtu ~/output/BidomainTutorial/vtk_output/annotated.vtu`
   * Then download to your machine and open `annotated.vtu` with Paraview.
+
 * Have a look at the auto-converted-at-compile-time CellML file which is in `build/heart/src/odes/cellml/LuoRudy1991.cpp`. Scroll down to the bottom method which sets the 'tagged' parameter names and values. These parameters can be altered in the C++ by calling (e.g.) `p_cell->SetParameter("membrane_fast_sodium_current_conductance", 0.0)`. Try altering the 'Cell Factory' at the top to use this method to set the sodium channel conductance to zero in one corner of the mesh (x >= 0.05 and y <= 0.02). Visualize the new spead of the activation wave (because a lot of the charge here moves by diffusion, this region still depolarises, but more slowly!).
-* Copy the test in the tutorial and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono' and how you deal with the results Vec
+
+* Make a second test method within the tutorial .hpp file and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono' and how you deal with the results Vec
   (which now has the form `V_0 ... V_n`, not `V_0 phi_0_ ... V_n phi_n`). 
-**Hint** we suggest you just use the `ReplicatableVector` to deal with the solution (fine for these small problems), not `DistributedVector`). 
+**Note** if you need to do anything to examine/print the solution in the C++ file, we suggest you just use the `ReplicatableVector` to deal with the solution (replicated across all processes, fine for these small problems), not `DistributedVector` just because the output from the latter can be confusing if you aren't used to dealing with parallel computing). 
 Compare with the bidomain simulation visually.
+
 * By calling 
 ```cpp
 monodomain_problem.SetWriteInfo();
@@ -50,12 +53,7 @@ monodomain_problem.SetWriteInfo();
 ```cpp
 monodomain_problem.Solve();
 ```
-determine, approximately, by trial and error, and for this monodomain test, the threshold below which the stimulus magnitude is too small to create an action potential. 
-
-* Convert the first 2D bidomain test to a 1D problem, stimulated at one end (a larger magnitude of the stimulus will be required).
-* Convert this into a heterogeneous problem where a different cell model is used in a region in centre of the mesh
-  * or, if you prefer, adjust a parameter of your choice within the cell model in just one region of the mesh)
-* you will need to visualise the results, with and without the change, side-by-side in Paraview to see it. 
+this method makes the program print out [min(V), max(V)], [min(phi_e), max(phi_e)] at each output time. It can be a simple way to see whether waves are propagating without even having to visualise the output. Determine, approximately, by trial and error/interval bisection, for this test, the threshold below which the stimulus magnitude is too small to create a propagating action potential. 
 
 **Note:** in the cell factory, you can do something like
 
