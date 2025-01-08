@@ -40,15 +40,15 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
 > [!IMPORTANT]
 > you need to run a little `AddVtuTimeAnnotations.py` script on the Chaste VTK output to add time annotations to avoid the need to duplicate the mesh at each time point as you might do for mechanics simulations. 
 
- * This command should work for VTK time annotations if you are in the `build` folder and using the codespace/docker setup: `python python/utils/AddVtuTimeAnnotations.py ~/output/BidomainTutorial/vtk_output/results.vtu ~/output/BidomainTutorial/vtk_output/annotated.vtu` but note that, on other setups, your output [may be in a different folder](https://chaste.github.io/docs/user-tutorials/#wheres-my-file-output)
-  * Then download to your machine by right clicking the folder in VS Code, and open `annotated.vtu` with Paraview. See [Using Paraview for Visualizing Cardiac Simulation Ouptut](https://chaste.github.io/docs/user-guides/visualisation-guides/paraview-for-cardiac/).
+ * This command should work for VTK time annotations if you are in the `build` folder and using the codespace/docker setup: `python python/utils/AddVtuTimeAnnotations.py ~/output/BidomainTutorial/vtk_output/results.vtu ~/output/BidomainTutorial/vtk_output/annotated.vtu` but note that, on other setups, your output [may be in a different folder.](https://chaste.github.io/docs/user-tutorials/#wheres-my-file-output)
+  * Then download to your machine by right clicking the folder in VS Code, and open `annotated.vtu` with Paraview. See [Using Paraview for Visualizing Cardiac Simulation Output](https://chaste.github.io/docs/user-guides/visualisation-guides/paraview-for-cardiac/).
 > [!IMPORTANT]
 > If you are running your own installation of Chaste, and Paraview shows the error ```Error parsing XML in stream at line...``` then you are likely to have hit [a known library incompatibility bug](https://github.com/Chaste/Chaste/issues/249) in recent Ubuntu distributions. Ask for help in fixing your installation (or continue with a codebase/docker installation). 
 * Have a look at the auto-converted-at-compile-time CellML file which is in `build/heart/src/odes/cellml/LuoRudy1991.cpp`. Scroll down to the bottom method which sets the 'tagged' parameter names and values, and work out which parameters have been tagged in the CellML file. The 'tagging' means these parameters are treated differently to normal constants in the equations, and are given names so that they can be altered using public methods (e.g.)
   
 ```p_cell->SetParameter("membrane_fast_sodium_current_conductance", 0.0);```
 
-* Try altering the 'Cell Factory' at the top to use this method to set the sodium channel conductance to zero in one corner of the mesh (x >= 0.05 and y <= 0.02). Visualize the new spead of the activation wave (because a lot of the charge here moves by diffusion, this region still depolarises, but more slowly!). For more flexibility in tagging new parameters and adjusting what gets generated, see the 
+* Try altering the 'Cell Factory' at the top of ``` TestRunningBidomainSimulationsTutorial.hpp``` to use this method to set the sodium channel conductance to zero in one corner of the mesh (x >= 0.05 and y <= 0.02). Visualize the new spead of the activation wave (because a lot of the charge here moves by diffusion, this region still depolarises, but more slowly!). For more flexibility in tagging new parameters and adjusting what gets generated, see the 
 [Code Generation From CellML Guide](https://chaste.github.io/docs/user-guides/code-generation-from-cellml/).
 
 > [!TIP]
@@ -56,7 +56,7 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
 > ```cpp
 > if ( (x>0.4) && (x<0.6) )
 > {
->     LuoRudyIModel1991OdeSystem* p_luo_rudy_system = new LuoRudyIModel1991OdeSystem(mpSolver, mpZeroStimulus);
+>     CellLuoRudy1991FromCellML* p_luo_rudy_system = new CellLuoRudy1991FromCellML(mpSolver, mpZeroStimulus);
 >     p_luo_rudy_system->SetParameter("membrane_fast_sodium_current_conductance",0.0);
 >     return p_luo_rudy_system;
 >}
