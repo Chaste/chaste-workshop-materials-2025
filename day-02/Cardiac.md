@@ -26,7 +26,7 @@ Run the tutorials, then use them as a basis for the following exercises.
 
 First, have a look at the [Single Cell Cardiac Tutorial](https://chaste.github.io/docs/user-tutorials/singlecellsimulation/), and check that all runs OK on your own install of Chaste (in the build folder, run `ctest -R TestSingleCellSimulationTutorial`).
 
-Second, read the [tutorial on solving bidomain problems](https://chaste.github.io/docs/user-tutorials/runningbidomainsimulations/). **It is highly recommended that you copy this code to a new C++ .hpp test file in your own user project (N.B. your user project will need to be [set up to use the 'heart' component](https://chaste.github.io/docs/user-guides/user-projects/#user-project-guide))**, as we'll use it as a basis for the exercises below, and run this tutorial.
+Second, read the [tutorial on solving bidomain problems](https://chaste.github.io/docs/user-tutorials/runningbidomainsimulations/). **It is highly recommended that you do not edit ```heart/test/tutorials/TestRunningBidomainSimulationsTutorial.hpp``` directly, but copy this code to a new C++ .hpp test file in your own user project (N.B. your user project will need to be [set up to use the 'heart' component](https://chaste.github.io/docs/user-guides/user-projects/#user-project-guide))**, as we'll use it as a basis for the exercises below, and run this tutorial.
 
 We'll use [Paraview](https://www.paraview.org/) for visualization (there is also the option to output to the [Meshalyzer](https://git.opencarp.org/openCARP/meshalyzer) or [Cmgui](https://github.com/cmiss/cmgui) formats), but since the cell-based workshop has been using Paraview we'll focus on that.
 
@@ -40,10 +40,10 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
 > [!IMPORTANT]
 > you need to run a little `AddVtuTimeAnnotations.py` script on the Chaste VTK output to add time annotations to avoid the need to duplicate the mesh at each time point as you might do for mechanics simulations. 
 
- * This command should work for VTK time annotations if you are in the `build` folder and using the codespace/docker setup: `python python/utils/AddVtuTimeAnnotations.py ~/output/BidomainTutorial/vtk_output/results.vtu ~/output/BidomainTutorial/vtk_output/annotated.vtu`
+ * This command should work for VTK time annotations if you are in the `build` folder and using the codespace/docker setup: `python python/utils/AddVtuTimeAnnotations.py ~/output/BidomainTutorial/vtk_output/results.vtu ~/output/BidomainTutorial/vtk_output/annotated.vtu` but note that, on other setups, your output [may be in a different folder](https://chaste.github.io/docs/user-tutorials/#wheres-my-file-output)
   * Then download to your machine by right clicking the folder in VS Code, and open `annotated.vtu` with Paraview. See [Using Paraview for Visualizing Cardiac Simulation Ouptut](https://chaste.github.io/docs/user-guides/visualisation-guides/paraview-for-cardiac/).
 > [!IMPORTANT]
-> If you are running your own installation of Chaste and Paraview shows the error ```Error parsing XML in stream at line...``` then you are likely to have hit [a known library incompatibility bug](https://github.com/Chaste/Chaste/issues/249) in recent Ubuntu distributions. Ask for help in fixing your installation (or continue with a codebase/docker installation). 
+> If you are running your own installation of Chaste, and Paraview shows the error ```Error parsing XML in stream at line...``` then you are likely to have hit [a known library incompatibility bug](https://github.com/Chaste/Chaste/issues/249) in recent Ubuntu distributions. Ask for help in fixing your installation (or continue with a codebase/docker installation). 
 * Have a look at the auto-converted-at-compile-time CellML file which is in `build/heart/src/odes/cellml/LuoRudy1991.cpp`. Scroll down to the bottom method which sets the 'tagged' parameter names and values, and work out which parameters have been tagged in the CellML file. The 'tagging' means these parameters are treated differently to normal constants in the equations, and are given names so that they can be altered using public methods (e.g.)
   
 ```p_cell->SetParameter("membrane_fast_sodium_current_conductance", 0.0);```
