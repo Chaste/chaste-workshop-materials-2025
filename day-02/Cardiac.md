@@ -41,7 +41,6 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
 * Have a look at the auto-converted-at-compile-time CellML file which is in `build/heart/src/odes/cellml/LuoRudy1991.cpp`. Scroll down to the bottom method which sets the 'tagged' parameter names and values. These parameters can be altered in the C++ by calling (e.g.) `p_cell->SetParameter("membrane_fast_sodium_current_conductance", 0.0)`. Try altering the 'Cell Factory' at the top to use this method to set the sodium channel conductance to zero in one corner of the mesh (x >= 0.05 and y <= 0.02). Visualize the new spead of the activation wave (because a lot of the charge here moves by diffusion, this region still depolarises, but more slowly!).
 
   * **Note:** in the cell factory, you can do something like
-
 ```cpp
 if ( (x>0.4) && (x<0.6) )
 {
@@ -50,9 +49,7 @@ if ( (x>0.4) && (x<0.6) )
     return p_luo_rudy_system;
 }
 ```
-where the parameter names can be seen by looking in the auto-generated model .cpp files.
-
-For more flexibility in tagging new parameters and adjusting what gets generated, see the 
+where the parameter names can be seen by looking in the auto-generated model .cpp files. For more flexibility in tagging new parameters and adjusting what gets generated, see the 
 [Code Generation From CellML Guide](https://chaste.github.io/docs/user-guides/code-generation-from-cellml/).
 
 * Make a second test method within the tutorial .hpp file and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono' and how you deal with the results Vec
