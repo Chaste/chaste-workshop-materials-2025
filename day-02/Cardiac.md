@@ -53,7 +53,7 @@ monodomain_problem.SetWriteInfo();
 ```cpp
 monodomain_problem.Solve();
 ```
-this method makes the program print out [min(V), max(V)], [min(phi_e), max(phi_e)] at each output time. It can be a simple way to see whether waves are propagating without even having to visualise the output. Determine, approximately, by trial and error/interval bisection, for this test, the threshold below which the stimulus magnitude is too small to create a propagating action potential. 
+this method makes the program print out `[min(V), max(V)], [min(phi_e), max(phi_e)]` at each output time. It can be a simple way to see whether waves are propagating without even having to visualise the output. Determine, approximately, by trial and error/interval bisection, for this test, the threshold below which the stimulus magnitude is too small to create a propagating action potential. 
 
 **Note:** in the cell factory, you can do something like
 
