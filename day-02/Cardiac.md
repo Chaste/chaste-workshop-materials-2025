@@ -35,10 +35,12 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
 ## Suggested exercises
 
 * Run the tutorials and visualise the results [using Paraview](https://chaste.github.io/docs/user-guides/visualisation-guides/paraview-for-cardiac/).
-  * This command should work if you are in the build folder and using the codespace setup: `python python/utils/AddVtuTimeAnnotations.py ~/output/BidomainTutorial/vtk_output/results.vtu ~/output/BidomainTutorial/vtk_output/annotated.vtu`
+  * Note that tests can be run from the `build` folder via `ctest` or just by running the executable, e.g. `./heart/test/TestRunningBidomainSimulationsTutorial`
+  * To run executables in parallel (on multiple processors) we use MPI, e.g. `mpirun -np 3 heart/test/TestRunningBidomainSimulationsTutorial` to run on 3 processors (note this might actually be slower than running on one process for very small meshes!)
+  * This command should work for VTK time annotations if you are in the `build` folder and using the codespace/docker setup: `python python/utils/AddVtuTimeAnnotations.py ~/output/BidomainTutorial/vtk_output/results.vtu ~/output/BidomainTutorial/vtk_output/annotated.vtu`
   * Then download to your machine by right clicking the folder in VS Code, and open `annotated.vtu` with Paraview.
 
-* Have a look at the auto-converted-at-compile-time CellML file which is in `build/heart/src/odes/cellml/LuoRudy1991.cpp`. Scroll down to the bottom method which sets the 'tagged' parameter names and values. These parameters can be altered in the C++ by calling (e.g.) `p_cell->SetParameter("membrane_fast_sodium_current_conductance", 0.0)`. Try altering the 'Cell Factory' at the top to use this method to set the sodium channel conductance to zero in one corner of the mesh (x >= 0.05 and y <= 0.02). Visualize the new spead of the activation wave (because a lot of the charge here moves by diffusion, this region still depolarises, but more slowly!).
+* Have a look at the auto-converted-at-compile-time CellML file which is in `build/heart/src/odes/cellml/LuoRudy1991.cpp`. Scroll down to the bottom method which sets the 'tagged' parameter names and values. These parameters can be altered using the public methods available on the cell model classes by calling (e.g.) `p_cell->SetParameter("membrane_fast_sodium_current_conductance", 0.0)`. Try altering the 'Cell Factory' at the top to use this method to set the sodium channel conductance to zero in one corner of the mesh (x >= 0.05 and y <= 0.02). Visualize the new spead of the activation wave (because a lot of the charge here moves by diffusion, this region still depolarises, but more slowly!).
 
   * **Note:** in the cell factory, you can do something like
 ```cpp
@@ -52,8 +54,8 @@ if ( (x>0.4) && (x<0.6) )
 where the parameter names can be seen by looking in the auto-generated model .cpp files. For more flexibility in tagging new parameters and adjusting what gets generated, see the 
 [Code Generation From CellML Guide](https://chaste.github.io/docs/user-guides/code-generation-from-cellml/).
 
-* Make a second test method within the tutorial .hpp file and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono' and how you deal with the results Vec
-  (which now has the form `V_0 ... V_n`, not `V_0 phi_0_ ... V_n phi_n`). 
+* Make a second test method within the tutorial .hpp file and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono'.
+(If you were using the results vector within C++, note that it now has the form `V_0 ... V_n`, not `V_0 phi_0_ ... V_n phi_n`). 
 **Note** if you need to do anything to examine/print the solution in the C++ file, we suggest you just use the `ReplicatableVector` to deal with the solution (replicated across all processes, fine for these small problems), not `DistributedVector` just because the output from the latter can be confusing if you aren't used to dealing with parallel computing). 
 Compare with the bidomain simulation visually.
 
