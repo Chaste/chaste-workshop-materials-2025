@@ -37,6 +37,7 @@ We'll use [Paraview](https://www.paraview.org/) for visualization (there is also
 * Run the tutorials and visualise the results [using Paraview](https://chaste.github.io/docs/user-guides/visualisation-guides/paraview-for-cardiac/).
   * This command should work if you are using the codespace setup: `cd ~/src && python python/utils/AddVtuTimeAnnotations.py ~/output/BidomainTutorial/vtk_output/results.vtu ~/output/BidomainTutorial/vtk_output/annotated.vtu`
   * Then download to your machine and open `annotated.vtu` with Paraview.
+* Have a look at the auto-converted-at-compile-time CellML file which is in `build/heart/src/odes/cellml/LuoRudy1991.cpp`. Scroll down to the bottom method which sets the 'tagged' parameter names and values. These parameters can be altered in the C++ by calling (e.g.) `p_cell->SetParameter("membrane_fast_sodium_current_conductance", 0.0)`. Try altering the 'Cell Factory' at the top to use this method to set the sodium channel conductance to zero in one corner of the mesh (x >= 0.05 and y <= 0.02). Visualize the new spead of the activation wave (because a lot of the charge here moves by diffusion, this region still depolarises, but more slowly!).
 * Copy the test in the tutorial and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono' and how you deal with the results Vec
   (which now has the form `V_0 ... V_n`, not `V_0 phi_0_ ... V_n phi_n`). 
 **Hint** we suggest you just use the `ReplicatableVector` to deal with the solution (fine for these small problems), not `DistributedVector`). 
