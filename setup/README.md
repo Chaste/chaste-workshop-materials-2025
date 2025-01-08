@@ -13,3 +13,7 @@ If you are building and running Chaste on your own computer, the specifications 
 ## Installation instructions
 
 See the [installation slides](https://docs.google.com/presentation/d/1SLtv8ugYJB-8hDmtTAMuxya1YDrkJPSIT-VOrqybKBc) for detailed instructions on building and running Chaste.
+
+## (Temporary) spreadsheet for GitHub usernames
+
+[Here](https://docs.google.com/spreadsheets/d/10yZTIO12zPIfqXz-AELWxUD227Ls4lcQGEOIQzJCEbM/edit?usp=sharing)
