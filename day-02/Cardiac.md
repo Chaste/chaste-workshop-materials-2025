@@ -51,7 +51,7 @@ if ( (x>0.4) && (x<0.6) )
     return p_luo_rudy_system;
 }
 ```
-where the parameter names can be seen by looking in the auto-generated model .cpp files. For more flexibility in tagging new parameters and adjusting what gets generated, see the 
+For more flexibility in tagging new parameters and adjusting what gets generated, see the 
 [Code Generation From CellML Guide](https://chaste.github.io/docs/user-guides/code-generation-from-cellml/).
 
 * Make a second test method within the tutorial .hpp file and convert it to the analogous monodomain problem - you only need to change 'Bi/bi' to 'Mono/mono'.
