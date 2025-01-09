@@ -3,6 +3,7 @@
 ## Scientific case study #1 (9:30)
 
 ## Chaste for cell-based modelling: latest features and future plans (10:00)
+[[Slides]](https://docs.google.com/presentation/d/1JR-Fr6uPOfNgjv8von3VqWkfxWoB3ogGDo48SSD-cMk)
 
 ## C++ Chaste for cell-based modelling (with user projects) (11:10)
 
