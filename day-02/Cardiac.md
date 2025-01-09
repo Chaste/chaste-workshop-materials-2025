@@ -83,4 +83,7 @@ Using this `SetWriteInfo()` call determine, approximately, by trial and error, t
 
 The default end time is only 5ms here, so we just see the activation wave. If you want to see the repolarisation wave you need to run until time 350ms.
 
+## Next Steps
+
+Have a look at the rest of the [Cardiac Tutorials](https://chaste.github.io/docs/user-tutorials/#cardiac) which provide a good overview of all Chaste's cardiac capabilities...
 
