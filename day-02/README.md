@@ -8,7 +8,7 @@
 ## C++ Chaste for cell-based modelling (with user projects) (11:10)
 [[Slides]](https://docs.google.com/presentation/d/1TBJ2abwGPBBEA43OMHXs7Lr2hqqP1UEuzClWXykD5Vs)
 
-## Hands-on session [ C++ Chaste for cell-based modelling (with user projects) ] (13:30)
+## Hands-on session [ C++ Chaste for cell-based modelling (with user projects) ] (11:40)
 [https://github.com/Chaste/IntroToChasteCpp2025](https://github.com/Chaste/IntroToChasteCpp2025)
 
 ## Stream A: Immersed Boundary Method in C++ and Python (14:30)
