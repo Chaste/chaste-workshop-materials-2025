@@ -6,6 +6,7 @@
 [[Slides]](https://docs.google.com/presentation/d/1JR-Fr6uPOfNgjv8von3VqWkfxWoB3ogGDo48SSD-cMk)
 
 ## C++ Chaste for cell-based modelling (with user projects) (11:10)
+[[Slides]](https://docs.google.com/presentation/d/1TBJ2abwGPBBEA43OMHXs7Lr2hqqP1UEuzClWXykD5Vs)
 
 ## Hands-on session [ C++ Chaste for cell-based modelling (with user projects) ] (13:30)
 
