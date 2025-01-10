@@ -1,7 +1,9 @@
 # Day 02 - Thu 9 Jan
 
 ## Scientific case study #1 (9:30)
-### Interfaces in multicellular tissues (James Osborne)
+### Interfaces in multicellular tissues
+by James Osborne, Melbourne
+
 [[Slides]](https://docs.google.com/presentation/d/1V62e8PMUUcQRkepXDh-DWHJnhOgroujv)
 
 ## Chaste for cell-based modelling: latest features and future plans (10:00)
@@ -26,3 +28,8 @@
 [[Instructions]](Cardiac.md)
 
 ## Scientific case study #2 (16:30)
+### Cell-based modelling of intestinal crypts and organoids
+by Martin Homer, Bristol
+
+[[Slides]](https://drive.google.com/file/d/1j6NFrMJSRb7WyRDf57u0iRVmc0K4B9ix)
+
