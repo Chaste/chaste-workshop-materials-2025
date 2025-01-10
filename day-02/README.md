@@ -2,7 +2,7 @@
 
 ## Scientific case study #1 (9:30)
 ### Interfaces in multicellular tissues
-by James Osborne, Melbourne
+by James Osborne, University of Melbourne
 
 [[Slides]](https://docs.google.com/presentation/d/1V62e8PMUUcQRkepXDh-DWHJnhOgroujv)
 
@@ -29,7 +29,7 @@ by James Osborne, Melbourne
 
 ## Scientific case study #2 (16:30)
 ### Cell-based modelling of intestinal crypts and organoids
-by Martin Homer, Bristol
+by Martin Homer, University of Bristol
 
 [[Slides]](https://drive.google.com/file/d/1j6NFrMJSRb7WyRDf57u0iRVmc0K4B9ix)
 
