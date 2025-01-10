@@ -1,6 +1,8 @@
 # Day 02 - Thu 9 Jan
 
 ## Scientific case study #1 (9:30)
+### Interfaces in multicellular tissues (James Osborne)
+[[Slides]](https://docs.google.com/presentation/d/1V62e8PMUUcQRkepXDh-DWHJnhOgroujv)
 
 ## Chaste for cell-based modelling: latest features and future plans (10:00)
 [[Slides]](https://docs.google.com/presentation/d/1JR-Fr6uPOfNgjv8von3VqWkfxWoB3ogGDo48SSD-cMk)
