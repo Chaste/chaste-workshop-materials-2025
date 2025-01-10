@@ -13,7 +13,11 @@
 ## How to get further support / how to contribute to Chaste (11:40)
 [[Slides]](https://docs.google.com/presentation/d/1Nnc2Tp1PTEXathf27n10cJkL56xJwlMBX8-6JDt9DuA)
 
-## Scientific case study #4 (12:00 )
+## Scientific case study #4 (12:00)
+### Adventures with Chaste
+by Philip Murray, University of Dundee
+
+[[Slides]](https://drive.google.com/file/d/1DW104Au65fp99Pr00f6ETMWLX-Gb0w14)
 
 ## Retrospective: lessons learned, future plans with Chaste (12:30)
 [[Slides]](https://docs.google.com/presentation/d/1eDvY-2RfjN2u3v3aMMq1O-ZcIOqI1Jb5JJ74Hy3fpQI)
