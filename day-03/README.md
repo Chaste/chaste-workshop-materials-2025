@@ -7,7 +7,8 @@
 
 ## Hands-on session [ Modelling cell-environment feedback ] (10:30)
 [[Code]](https://github.com/BJackal/ChasteWorkshopSRN/tree/master)
-[[Updated link for Cell-based comparison 2017 paper]](https://github.com/Chaste/trac_archive/wiki/Paper-Tutorials-_-Cell-Based-Comparison2017)
+[[Updated link for Cell-based comparison 2017 tutorial]](https://chaste.github.io/docs/paper-tutorials/cellbasedcomparison2017/)
+[[Updated link for Cell-based comparison 2017 paper code]](https://github.com/Chaste/project_CellBasedComparison2017)
 
 ## How to get further support / how to contribute to Chaste (11:40)
 [[Slides]](https://docs.google.com/presentation/d/1Nnc2Tp1PTEXathf27n10cJkL56xJwlMBX8-6JDt9DuA)
